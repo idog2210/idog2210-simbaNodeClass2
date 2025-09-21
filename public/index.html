@@ -1,65 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Yoda Talk</title>
-        <link rel="icon" href="https://thumbs.dreamstime.com/b/yoda-line-icon-star-wars-concept-mysterious-species-jedi-master-vector-sign-white-background-outline-style-icon-yoda-line-icon-228926419.jpg">
-        <link rel="stylesheet" href="./style.css">
-        <script src="app.js" defer></script>
-    </head>
+  <head>
+    <title>Yoda Talk</title>
+    <link rel="icon" href="https://thumbs.dreamstime.com/b/yoda-line-icon-star-wars-concept-mysterious-species-jedi-master-vector-sign-white-background-outline-style-icon-yoda-line-icon-228926419.jpg" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="app.js" defer></script>
+  </head>
 
-    <body style="font-family: Arial;">
-        <h1>Yoda Talk Translator</h1>
-        <p>Here, you can type a word or an expression you'd wish to translate, or get a random word by pressing the button.</p>
+  <body>
+    <h1>Yoda Talk Translator</h1>
+    <p>Here, you can type a word or an expression you'd wish to translate, or get a random word by pressing the button.</p>
 
-        <!--Dictionary div-->
-        <div>
-            <h2>Dictionary</h2>
-            <form id="dictForm">
-                <input placeholder="Enter word" id="dictFormInput" autocomplete="off" pattern="^\S+$" title="Please enter only one word (no spaces)">
-                <button>Dictionary</button>
-            </form>
+    <!--Dictionary div-->
+    <div>
+      <h2>Dictionary</h2>
+      <form id="dictForm">
+        <input placeholder="Enter word" id="dictFormInput" autocomplete="off" pattern="^\S+$" title="Please enter only one word (no spaces)" />
+        <button>Dictionary</button>
+      </form>
 
-            <p id="wordDictP" style="font-weight: bold; text-decoration: underline;"></p>
-            <p id="message1"></p>
-            <p id="message2"></p>
-            <p id="message3"></p>
-        </div>
+      <p id="wordDictP" style="font-weight: bold; text-decoration: underline"></p>
+      <p id="message1"></p>
+      <p id="message2"></p>
+      <p id="message3"></p>
+    </div>
 
-        <!--Translate div-->
-        <div>
-            <h2>Translate</h2>
-            <form id="transForm">
-                <input id="transFormInput" placeholder="Enter expression" autocomplete="off">
-                <button>Translate</button>
-            </form>
+    <!--Translate div-->
+    <div class="buttons">
+      <button class="buttons" id="transForm">Translate Definition</button>
+      <button id="randomWordButton">Random Word</button>
+    </div>
 
-        <p id="exprTransP"></p>
-        <p id="message4"></p>
-
-        </div>
-
-        <!--Random word div-->
-        <div>
-            <h2>Random word</h2>
-            <button id="randomWordButton">Random word generator</button>
-            <p id="randomWordP"></p>
-            <button class="randomButtons" id="randomDict">Dictionary</button>
-            <button class="randomButtons" id="randomTrans">Translate</button>
-            
-            <div id="randomDictDiv" style="display: none;">
-                <h2>Dictionary For The Random Word</h2>
-                <p id="randomWordDictP" style="font-weight: bold; text-decoration: underline;"></p>
-                <p id="randomMessage1"></p>
-                <p id="randomMessage2"></p>
-                <p id="randomMessage3"></p>
-            </div>
-
-            <div id="randomTransDiv" style="display: none;">
-                <h2>Translation For The Random Word</h2>
-                <p id="randomExprTransP"></p>
-                <p id="randomMessage4"></p>
-            </div>
-        </div>
-
-    </body>
+    <div id="translateDiv">
+      <p id="exprTransP"></p>
+      <p id="message4"></p>
+    </div>
+  </body>
 </html>

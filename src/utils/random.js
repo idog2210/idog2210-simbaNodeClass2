@@ -1,16 +1,16 @@
-const request = require('request');
+const axios = require('axios');
 
-const random = (callback) => {
+const random = async (callback) => {
   const url = 'https://random-word-api.vercel.app/api?words=1';
 
-  request({ url, json: true }, (error, response) => {
-    if (error) {
-      return callback('Network error');
-    }
+  try {
+    const response = await axios.get(url);
 
-    const randomWord = response?.body?.[0];
+    const randomWord = response?.data?.[0];
     callback(null, { randomWord });
-  });
+  } catch (error) {
+    return callback('Network error');
+  }
 };
 
 module.exports = random;
